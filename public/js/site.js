@@ -4,9 +4,132 @@ const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
 
+var totalRows = 3;
+            var cellsInRow = 9;
+            var min;
+            var max;
+
+            function drawTable() {
+                var div1 = document.getElementById('div1');
+                var tbl = document.createElement("table");
+                for (var r = 0; r < totalRows; r++) {
+                    var row = document.createElement("tr");
+                    for (var c = 0; c < cellsInRow; c++) {
+                        if (c == 0 && (r == 0 || r == 2)) {
+                            min = 1;
+                            max = 10;
+                            var cell = document.createElement("td");
+                            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                            var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            continue;
+                        }
+                        if (c == 1 && r == 1) {
+                            min = 11;
+                            max = 20;
+                            var cell = document.createElement("td");
+                            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                            var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            continue;
+                        }
+                        if (c == 2 && (r == 0 || r == 2)) {
+                            min = 21;
+                            max = 30;
+                            var cell = document.createElement("td");
+                            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                            var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            continue;
+
+                        }
+                        if (c == 3 && r == 1) {
+                            min = 31;
+                            max = 40;
+                            var cell = document.createElement("td");
+                            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                            var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            continue;
+
+                        }
+                        if (c == 4 && (r == 0 || r == 2)) {
+                            min = 41;
+                            max = 50;
+                            var cell = document.createElement("td");
+                            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                            var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            continue;
+
+                        }
+                        if (c == 5 && r == 1) {
+                            min = 51;
+                            max = 60;
+                            var cell = document.createElement("td");
+                            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                            var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            continue;
+
+                        }
+                        if (c == 6 && (r == 0 || r == 2)) {
+                            min = 61;
+                            max = 70;
+                            var cell = document.createElement("td");
+                            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                            var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            continue;
+
+                        }
+                        if (c == 7 && (r == 0 || r == 1)) {
+                            min = 71;
+                            max = 80;
+                            var cell = document.createElement("td");
+                            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                            var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            continue;
+
+                        }
+                        if (c == 8 && (r == 1 || r == 2)) {
+                            min = 81;
+                            max = 90;
+                            var cell = document.createElement("td");
+                            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                            var cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
+                            cell.appendChild(cellText);
+                            row.appendChild(cell);
+                            continue;
+
+                        }
+                        var cell = document.createElement("td");
+                        getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+                        var cellText = document.createTextNode(" ");
+                        cell.appendChild(cellText);
+                        row.appendChild(cell);
+                    }
+
+                    tbl.appendChild(row); // add the row to the end of the table body
+                }
+
+                div1.appendChild(tbl); // appends <table> into <div1>
+            }
+            window.onload = drawTable;
 
 function myFunction() {
-   
+  var row = document.getElementById("myRow");
+  var x = row.insertCell(0);
+  x.innerHTML = Math.floor((Math.random() * 90) + 1);
     document.getElementById("app").innerHTML="";
     timePassed = 0;
     timeLeft = 20;

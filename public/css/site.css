@@ -1,3 +1,46 @@
+
+#myHeader {
+    background-color: #DC143C;
+    color: black;
+    padding: 40px;
+    text-align: center;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+#div1 {
+  margin: 10px;
+  font-size: 1.25em;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #7f7f7f;
+}
+
+td {
+  border: 1px solid #7f7f7f;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.button:hover {
+    background-color: green;
+}
+table,
+        td {
+            border: 1px solid black;
+            font-family: Arial;
+            font-size: 40pt;
+        }
+
 body {
   font-family: sans-serif;
   display: grid;
